@@ -1,0 +1,1 @@
+//let's do a short blurb about our team and then like a collage of different images perchance?
