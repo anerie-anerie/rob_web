@@ -16,9 +16,9 @@ const NavigationButtons = ({ prevPage, nextPage }) => {
   };
 
   return (
-    <div>
-      {prevPage && <button onClick={goPrev}>Previous</button>}
-      {nextPage && <button onClick={goNext}>Next</button>}
+    <div className="nav-buttons">
+      {prevPage && <button className="nav-button prev" onClick={goPrev}>←</button>}
+      {nextPage && <button className="nav-button next" onClick={goNext}>→</button>}
     </div>
   );
 };
