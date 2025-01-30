@@ -12,7 +12,13 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+}
+
+.nav-button.next {
+  position: absolute;
+  right: 5vw; /* Fix right button position */
+  bottom: 4vh;
+
 }
 
 .nav-button img {
@@ -20,6 +26,7 @@
   height: auto;
   transition: transform 0.2s ease-in-out;
 }
+
 
 .nav-button img:hover {
   transform: scale(1.1); /* Slight zoom on hover */
