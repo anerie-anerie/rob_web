@@ -1,31 +1,26 @@
 .nav-buttons {
-  position: fixed; 
-  bottom: 20px; 
+  position: fixed;
+  bottom: 20px;
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px; 
+  padding: 0 20px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 10px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
+.nav-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-button img {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-button img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}

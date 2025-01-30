@@ -1,5 +1,3 @@
-//needed to handle the next and previous button control and stuff
-// src/components/NavigationButtons.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './navigation.css';
@@ -17,8 +15,16 @@ const NavigationButtons = ({ prevPage, nextPage }) => {
 
   return (
     <div className="nav-buttons">
-      {prevPage && <button className="nav-button prev" onClick={goPrev}>←</button>}
-      {nextPage && <button className="nav-button next" onClick={goNext}>→</button>}
+      {prevPage && (
+        <button className="nav-button prev" onClick={goPrev}>
+          <img src="/img/left-arrow.png" alt="Previous" />
+        </button>
+      )}
+      {nextPage && (
+        <button className="nav-button next" onClick={goNext}>
+          <img src="/img/right-arrow.png" alt="Next" />
+        </button>
+      )}
     </div>
   );
 };
