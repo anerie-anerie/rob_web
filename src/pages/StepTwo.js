@@ -7,7 +7,7 @@ const StepTwo = () => {
     <div>
       {/* Image of the Canva Design */}
       <img
-        src={process.env.PUBLIC_URL + "public/img/stageTwo.png"}
+        src={"public/img/stageTwo.png"}
         alt="Merivale ROB Design"
         style={{
           display: "block",
