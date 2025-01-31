@@ -170,3 +170,25 @@
     height: auto; 
     display: block; 
 }
+
+/* In Steps.css */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+video {
+  width: 80%;
+  max-width: 600px; /* Max width */
+  height: auto; /* Keep aspect ratio */
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  video {
+    width: 100%; /* On smaller screens, the video will take full width */
+    max-width: 400px; /* Limit max width on small screens */
+  }
+}

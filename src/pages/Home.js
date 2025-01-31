@@ -101,7 +101,7 @@ const RollingGallery = ({ autoplay = true, pauseOnHover = true, images = IMGS })
         </div>
       </div>
     <footer className="footer">
-      <p> Coded with passion ❤️‍🔥 | TARK</p>
+      <p> coded with passion ❤️‍🔥 | TARK</p>
     </footer>  
       
    

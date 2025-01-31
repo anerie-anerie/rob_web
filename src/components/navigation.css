@@ -44,5 +44,5 @@
 /* Make the Begin button bigger on the Home page */
 .home-button img {
   width: auto; /* Increased size */
-  height: 8vh;
+  height: 10vh;
 }

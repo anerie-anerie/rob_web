@@ -1,18 +1,14 @@
 .home-container {
   text-align: center;
   padding: 30px 10px; /* Reduced padding to bring gallery closer */
-}
-
-.home-container h1,
-.home-container h2 {
-  font-family: 'Cooper Hewitt', sans-serif;
-  font-weight: bold;
-  color: #ffb703;
-  margin-bottom: 10px; /* Reduced margin for tighter spacing */
+  position: relative;
 }
 
 .home-container h1 {
   font-size: 3rem;
+  color: #ffb703;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 .home-container h2 {
@@ -119,7 +115,7 @@
   object-fit: cover;
   border-radius: 10px;
   border: 2px solid #fff;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(255, 215, 142, 0.8), 0 0 20px rgba(255, 215, 142, 0.8), 0 0 30px rgba(255, 215, 142, 0.8); /* Glow effect */
 }
 
 .gallery-item img {
@@ -137,10 +133,11 @@
   }
 }
 
-.forklift-title {
-  margin-bottom: 10px; 
-}
+.navigation-buttons-container{
+  position: absolute;
+  bottom: 150h;
 
+}
 
 .logo {
   position: absolute;
