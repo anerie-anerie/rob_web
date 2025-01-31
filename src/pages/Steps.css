@@ -96,5 +96,38 @@
     border-radius: 10px;
     font-size: 1rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
+.step-one-container {
+    background-image: url('/public/img/stageOne.png'); 
+    background-size: 90% auto;
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+    text-align: center; 
+    background-attachment: scroll; 
+    overflow: auto; 
   }
+
+  .step-three-container {
+    background-image: url('/public/img/stageThree.png'); 
+    background-size: 90% auto;
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+    text-align: center; 
+    background-attachment: scroll; 
+    overflow: auto; 
+  }
+
+  .step-four-container {
+    background-image: url('/public/img/stageFour.png'); 
+    background-size: 90% auto;
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+    text-align: center; 
+    background-attachment: scroll; 
+    overflow: auto; 
+  }
+  
