@@ -4,8 +4,20 @@ import NavigationButtons from "../components/navigation";
 
 const StepTwo = () => {
   return (
-    <div className="step-two-container">
-      
+    <div>
+      {/* Image of the Canva Design */}
+      <img
+        src="/img/stageTwo.png" // Correct path
+        alt="Merivale ROB Design"
+        style={{
+          display: "block",
+          margin: "20px auto",
+          maxWidth: "90%",
+          height: "auto",
+        }}
+      />
+
+      {/* Navigation Buttons */}
       <NavigationButtons prevPage="/StepOne" nextPage="/StepThree" />
     </div>
   );
