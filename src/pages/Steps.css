@@ -98,16 +98,23 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+
 .step-one-container {
-    background-image: url('/public/img/stageOne.png'); 
-    background-size: 90% auto;
-    background-position: top center; 
-    background-repeat: no-repeat; 
-    min-height: 100vh;
-    text-align: center; 
-    background-attachment: scroll; 
-    overflow: auto; 
+    background-image: url('/public/img/stageOne.png'); /* Adjust the path if needed */
+    background-size: 90vw auto; /* Set width to 90% of viewport, height adjusts automatically */
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures the section is at least as tall as the viewport */
+    height: auto; /* Allows it to grow based on content */
+    text-align: center;
+    background-attachment: scroll; /* Allows the image to scroll normally */
   }
+
+  .bg-image {
+    width: 90vw; 
+    height: auto; 
+    display: block; 
+}
 
   .step-three-container {
     background-image: url('/public/img/stageThree.png'); 
