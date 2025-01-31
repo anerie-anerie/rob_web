@@ -22,22 +22,20 @@ const RollingGallery = ({ autoplay = true, pauseOnHover = true, images = IMGS })
   const rotationValue = useRef(0);
   const controls = useAnimation();
 
-  // Auto-rotation logic (slowed down)
   useEffect(() => {
     if (autoplay) {
       const interval = setInterval(() => {
         controls.start({
           rotateY: rotationValue.current - (360 / faceCount),
-          transition: { duration: 4, ease: "linear" },  // Slowed down animation (4 seconds)
+          transition: { duration: 4, ease: "linear" }, 
         });
-        rotationValue.current -= 360 / faceCount; // Update rotation value
-      }, 3000); // Slower image change interval (3 seconds)
+        rotationValue.current -= 360 / faceCount; 
+      }, 3000); 
 
       return () => clearInterval(interval);
     }
   }, [autoplay, controls, faceCount]);
 
-  // Handle resize
   useEffect(() => {
     const handleResize = () => {
       setIsScreenSizeSm(window.innerWidth <= 640);
@@ -47,10 +45,10 @@ const RollingGallery = ({ autoplay = true, pauseOnHover = true, images = IMGS })
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Pause and resume autoplay on hover
+  
   const handleMouseEnter = () => {
     if (pauseOnHover) {
-      controls.stop(); // Stop the animation
+      controls.stop(); 
     }
   };
 
@@ -58,7 +56,7 @@ const RollingGallery = ({ autoplay = true, pauseOnHover = true, images = IMGS })
     if (pauseOnHover) {
       controls.start({
         rotateY: rotationValue.current - (360 / faceCount),
-        transition: { duration: 4, ease: "linear" },  // Match the slowed down transition
+        transition: { duration: 4, ease: "linear" },  
       });
     }
   };
