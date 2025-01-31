@@ -158,7 +158,7 @@
     background-image: url('/public/img/stageSix.png'); 
     background-size: 90% auto;
     background-position: top center; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     min-height: 100vh;
     text-align: center; 
     background-attachment: scroll; 
