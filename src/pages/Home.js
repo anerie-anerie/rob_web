@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, useMotionValue, useAnimation, useTransform } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import "./Home.css";
 import NavigationButtons from "../components/navigation";
 
@@ -12,51 +12,32 @@ const IMGS = [
   "/img/forky6.jpg"
 ];
 
-const RollingGallery = ({ autoplay = false, pauseOnHover = false, images = IMGS }) => {
+const RollingGallery = ({ autoplay = true, pauseOnHover = true, images = IMGS }) => {
   const [isScreenSizeSm, setIsScreenSizeSm] = useState(window.innerWidth <= 640);
 
   const cylinderWidth = isScreenSizeSm ? 1100 : 1800;
   const faceCount = images.length;
   const faceWidth = (cylinderWidth / faceCount) * 1.5; 
-  const dragFactor = 0.05;
   const radius = cylinderWidth / (2 * Math.PI);
-
-  const rotation = useMotionValue(0);
+  const rotationValue = useRef(0);
   const controls = useAnimation();
-  const autoplayRef = useRef();
 
-  const handleDrag = (_, info) => {
-    rotation.set(rotation.get() + info.offset.x * dragFactor);
-  };
-
-  const handleDragEnd = (_, info) => {
-    controls.start({
-      rotateY: rotation.get() + info.velocity.x * dragFactor,
-      transition: { type: "spring", stiffness: 60, damping: 20, mass: 0.1, ease: "easeOut" },
-    });
-  };
-
-  const transform = useTransform(rotation, (value) => {
-    return `rotate3d(0, 1, 0, ${value}deg)`;
-  });
-
-  // Autoplay effect with adjusted timing
+  // Auto-rotation logic (slowed down)
   useEffect(() => {
     if (autoplay) {
-      autoplayRef.current = setInterval(() => {
+      const interval = setInterval(() => {
         controls.start({
-          rotateY: rotation.get() - (360 / faceCount),
-          transition: { duration: 2, ease: "linear" },
+          rotateY: rotationValue.current - (360 / faceCount),
+          transition: { duration: 4, ease: "linear" },  // Slowed down animation (4 seconds)
         });
-        rotation.set(rotation.get() - (360 / faceCount));
-      }, 2000);
+        rotationValue.current -= 360 / faceCount; // Update rotation value
+      }, 3000); // Slower image change interval (3 seconds)
 
-      return () => {
-        if (autoplayRef.current) clearInterval(autoplayRef.current);
-      };
+      return () => clearInterval(interval);
     }
-  }, [autoplay, rotation, controls, faceCount]);
+  }, [autoplay, controls, faceCount]);
 
+  // Handle resize
   useEffect(() => {
     const handleResize = () => {
       setIsScreenSizeSm(window.innerWidth <= 640);
@@ -66,57 +47,40 @@ const RollingGallery = ({ autoplay = false, pauseOnHover = false, images = IMGS 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Pause on hover with smooth transition
+  // Pause and resume autoplay on hover
   const handleMouseEnter = () => {
-    if (autoplay && pauseOnHover) {
-      if (autoplayRef.current) clearInterval(autoplayRef.current);
-      controls.stop(); // Stop the animation smoothly
+    if (pauseOnHover) {
+      controls.stop(); // Stop the animation
     }
   };
 
   const handleMouseLeave = () => {
-    if (autoplay && pauseOnHover) {
+    if (pauseOnHover) {
       controls.start({
-        rotateY: rotation.get() - (360 / faceCount),
-        transition: { duration: 2, ease: "linear" },
+        rotateY: rotationValue.current - (360 / faceCount),
+        transition: { duration: 4, ease: "linear" },  // Match the slowed down transition
       });
-      rotation.set(rotation.get() - (360 / faceCount));
-
-      autoplayRef.current = setInterval(() => {
-        controls.start({
-          rotateY: rotation.get() - (360 / faceCount),
-          transition: { duration: 2, ease: "linear" },
-        });
-        rotation.set(rotation.get() - (360 / faceCount));
-      }, 2000);
     }
   };
 
   return (
     <div className="home-container">
       <img src="/img/logo.webp" alt="Logo" className="logo" />
-
-    <h1>The Majestic Marauders 50226B presents...</h1>
-    <h2 className="forklift-title">🔥 FORKLIFT 🔥</h2> 
-    <div className="gallery-container">
-      <div className="gallery-content">
-        <motion.div
-          drag="x"
-          className="gallery-track"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          style={{
-            transform: transform,
-            width: cylinderWidth,
-            transformStyle: "preserve-3d",
-          }}
-          onDrag={handleDrag}
-          onDragEnd={handleDragEnd}
-          animate={controls}
-        >
-          {images.map((url, i) => {
-            console.log(url);  // This will log the image URLs to check them
-            return (
+      <h1>The Majestic Marauders 50226B presents...</h1>
+      <h2 className="forklift-title">🔥 FORKLIFT 🔥</h2> 
+      <div className="gallery-container">
+        <div className="gallery-content">
+          <motion.div
+            className="gallery-track"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            animate={controls}
+            style={{
+              transformStyle: "preserve-3d",
+              width: cylinderWidth,
+            }}
+          >
+            {images.map((url, i) => (
               <div
                 key={i}
                 className="gallery-item"
@@ -127,14 +91,13 @@ const RollingGallery = ({ autoplay = false, pauseOnHover = false, images = IMGS 
               >
                 <img src={url} alt={`gallery-item-${i}`} className="gallery-img" />
               </div>
-            );
-          })}
-        </motion.div>
+            ))}
+          </motion.div>
+        </div>
+        <div>
+          <NavigationButtons nextPage="/StepOne" />
+        </div>
       </div>
-      <div>
-        <NavigationButtons nextPage="/StepOne" />
-      </div>
-    </div>
     </div>
   );
 };

@@ -25,7 +25,7 @@ const About = () => {
     return (
         <div className="about-container">
             <h1 className="about-title">About Us</h1>
-            <p className="about-text">We're a passionate team dedicated to innovation, teamwork, and problem-solving.</p>
+            <p className="about-text">We're a passionate team dedicated to innovation, teamwork, and problem-solving. With only 3 months in our school year to build our robot, we put our robotics passion to the test every week as team.</p>
 
             <div className="collage">
                 {images.map((img, index) => (
