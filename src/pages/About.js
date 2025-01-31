@@ -37,6 +37,9 @@ const About = () => {
             </div>
 
             <NavigationButtons prevPage="/StepSix" nextPage="/" />
+            <footer className="footer">
+                <p> Coded with passion ❤️‍🔥 | TARK</p>
+            </footer>
         </div>
     );
 };

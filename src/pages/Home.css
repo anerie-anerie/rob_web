@@ -144,10 +144,22 @@
 
 .logo {
   position: absolute;
-  top: 5vh; /* Distance from the top */
-  left: 5vh; /* Distance from the right */
-  width: 5.7vw; /* Adjust the size as needed */
-  height: auto; /* Maintain aspect ratio */
-  z-index: 10; /* Ensure it stays on top of other elements */
-  border-radius: 10px; /* adds roundness */
+  top: 5vh; 
+  left: 5vh; 
+  width: 5.7vw; 
+  height: auto; 
+  z-index: 10; 
+  border-radius: 10px; 
+}
+
+.footer {
+  margin-top: auto; 
+  padding: 20px;
+  background: #023047;
+  color: white;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

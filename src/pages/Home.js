@@ -94,7 +94,11 @@ const RollingGallery = ({ autoplay = true, pauseOnHover = true, images = IMGS })
         </div>
         <div>
           <NavigationButtons nextPage="/StepOne" />
+          <footer className="footer">
+                <p> Coded with passion ❤️‍🔥 | TARK</p>
+            </footer>
         </div>
+   
       </div>
     </div>
   );
