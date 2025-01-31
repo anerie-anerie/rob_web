@@ -1,13 +1,18 @@
 .home-container {
   text-align: center;
-  padding: 0px;
+  padding: 30px 10px; /* Reduced padding to bring gallery closer */
+}
+
+.home-container h1,
+.home-container h2 {
+  font-family: 'Cooper Hewitt', sans-serif;
+  font-weight: bold;
+  color: #ffb703;
+  margin-bottom: 10px; /* Reduced margin for tighter spacing */
 }
 
 .home-container h1 {
   font-size: 3rem;
-  color: #ffb703;
-  padding-bottom: 2vh;
-  padding-top: 2vh;
 }
 
 .home-container h2 {
@@ -16,10 +21,12 @@
 }
 
 .gallery-container {
+  margin-top: 0; /* Remove or reduce margin on top of the gallery */
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0px; /* Reduced margin to bring gallery closer to title */
   height: 500px;
   width: 100%;
   overflow: hidden;
@@ -30,7 +37,7 @@
   top: 0;
   height: 100%;
   width: 48px;
-  z-index: 2;
+  z-index: 10;
 }
 
 .gallery-content {
@@ -112,7 +119,7 @@
   object-fit: cover;
   border-radius: 10px;
   border: 2px solid #fff;
-  box-shadow: 0 0 10px rgba(254, 216, 145, 0.8), 0 0 20px rgba(254, 216, 145, 0.8), 0 0 30px rgba(254, 216, 145, 0.8); /* Glow effect */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .gallery-item img {
@@ -130,6 +137,10 @@
   }
 }
 
+.forklift-title {
+  margin-bottom: 10px; 
+}
+
 
 .logo {
   position: absolute;
@@ -137,32 +148,18 @@
   left: 5vh; 
   width: 5.7vw; 
   height: auto; 
-  z-index: 3; 
+  z-index: 10; 
   border-radius: 10px; 
 }
 
-.navigation-buttons-container {
-  position: absolute;
-  left: -43%; /* Centers the button */
-  transform: translateX(-50%);
-  width: 10vw;
-  height: auto;
-  z-index: 100;
-}
-
 .footer {
-  background: pink; /* Set footer background color to pink */
-  color: hotpink;  /* Text color in pink */
-  text-align: center;
-  width: 100%;
-  padding: 20vw;
-}
-
-.p{
-  padding: 5vw 10vh;
-  background: transparent; /* No background */
+  margin-top: auto; 
+  padding: 20px;
+  background: #023047;
   color: hotpink;
   text-align: center;
-  font-size: 14px;
-  margin-top: 10vh; /* Adds space before footer */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

@@ -15,13 +15,13 @@ const TitleUpdater = () => {
   useEffect(() => {
     const titles = {
       "/": "Majestic Marauders",
-      "/StepOne": "Stage One",
-      "/StepTwo": "Stage Two",
-      "/StepThree": "Stage Three",
-      "/StepFour": "Stage Four",
-      "/StepFive": "Stage Five",
-      "/StepSix": "Stage Six",
-      "/About": "About Us"
+      "/StepOne": "Majestic Marauders",
+      "/StepTwo": "Majestic Marauders",
+      "/StepThree": "Majestic Marauders",
+      "/StepFour": "Majestic Marauders",
+      "/StepFive": "Majestic Marauders",
+      "/StepSix": "Majestic Marauders",
+      "/About": "Majestic Marauders"
     };
 
     document.title = titles[location.pathname] || "Majestic Marauders";
