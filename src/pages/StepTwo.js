@@ -27,7 +27,7 @@ const StepTwo = () =>{
               could soon become a problem.
             </p>
             <img
-              src="/public/img/conveyor-old.jpg"
+              src="/public/img/conveyor-old.png"
               alt="Conveyor Old Design"
               className="image"
             />
@@ -43,7 +43,7 @@ const StepTwo = () =>{
               basically the same drawing with holes on the base.
             </p>
             <img
-              src="/public/img/Conveyor New.png"
+              src="/public/img/conveyor-new.png"
               alt="Conveyor New Design"
               className="image"
             />
