@@ -109,8 +109,8 @@
     overflow: auto; 
   }
 
-  .step-three-container {
-    background-image: url('/public/img/stageThree.png'); 
+  .step-two-container {
+    background-image: url('/public/img/stageTwo.png'); 
     background-size: 90% auto;
     background-position: top center; 
     background-repeat: no-repeat; 
@@ -119,6 +119,17 @@
     background-attachment: scroll; 
     overflow: auto; 
   }
+
+  .step-three-container {
+    background-image: url('/public/img/stageThree.png'); 
+    background-size: contain; /* Ensures the image fits fully horizontally */
+    background-position: top center; /* Aligns the image to the top-center */
+    background-repeat: no-repeat; 
+    min-height: 100vh; /* Ensures the container is at least as tall as the viewport */
+    text-align: center; 
+    background-attachment: scroll; 
+    overflow-y: auto; /* Allows scrolling vertically if the image overflows */
+  }  
 
   .step-four-container {
     background-image: url('/public/img/stageFour.png'); 
