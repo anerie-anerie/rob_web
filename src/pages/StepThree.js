@@ -4,10 +4,10 @@ import NavigationButtons from "../components/navigation";
 
 const StepThree = () => {
     return (
-      <div className="step-three-container">
-        
-        <NavigationButtons prevPage="/StepTwo" nextPage="/StepFour" />
-      </div>
+      <div>
+      <img src="img/stageThree.png" className="bg-image"></img>
+      <NavigationButtons prevPage="/StepTwo" nextPage="/StepFour" />
+    </div>
     );
   };
 
