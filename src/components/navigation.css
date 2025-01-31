@@ -1,5 +1,5 @@
 .nav-buttons {
-  position: fixed;
+  position: relative;
   bottom: 20px;
   left: 0;
   right: 0;
@@ -10,9 +10,11 @@
 
 /* Position the Home page button at the center */
 .nav-buttons .home-button {
-  position: absolute;
-  left: 50%;
+  position: relative;
+  padding-left: 60vw;
+  left: 88%;
   transform: translateX(-50%);
+  padding-bottom: 4vh;
 }
 
 /* Position for the Next button on other pages */

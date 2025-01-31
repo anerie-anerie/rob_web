@@ -93,18 +93,17 @@ const RollingGallery = ({ autoplay = true, pauseOnHover = true, images = IMGS })
           </motion.div>
         </div>
         <div>
+        </div>
+        </div>
         
-        <div className="navigation-buttons-container">
-          <NavigationButtons nextPage="/StepOne" />
-        </div>
-          
-        </div>
-      </div>
+    <div className="navigation-buttons-container">
+     <NavigationButtons nextPage="/StepOne" />
+    </div>
+        
     <footer className="footer">
       <p> coded with passion ❤️‍🔥 | TARK</p>
-    </footer>  
+    </footer>
       
-   
       
     </div>
   );

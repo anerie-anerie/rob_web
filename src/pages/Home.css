@@ -17,12 +17,10 @@
 }
 
 .gallery-container {
-  margin-top: 0; /* Remove or reduce margin on top of the gallery */
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0px; /* Reduced margin to bring gallery closer to title */
   height: 500px;
   width: 100%;
   overflow: hidden;
@@ -133,11 +131,15 @@
   }
 }
 
-.navigation-buttons-container{
+.navigation-buttons-container {
+  margin-top: auto; 
+  padding: 20px;
   position: absolute;
-  bottom: 100vh;
-
+  bottom: 0;
+  left: 0;
 }
+
+
 
 .logo {
   position: absolute;

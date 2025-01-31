@@ -122,3 +122,13 @@
     position: absolute;
     right: 20px;
 }
+
+.logo {
+    position: absolute;
+    top: 5vh; 
+    left: 5vh; 
+    width: 5.7vw; 
+    height: auto; 
+    z-index: 10; 
+    border-radius: 10px; 
+  }

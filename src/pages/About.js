@@ -24,6 +24,7 @@ const images = [
 const About = () => {
     return (
         <div className="about-container">
+            <img src="/img/logo.webp" alt="Logo" className="logo" />
             <h1 className="about-title">About Us</h1>
             <p className="about-text">We're a passionate team dedicated to innovation, teamwork, and problem-solving. With only 3 months in our school year to build our robot, we put our robotics passion to the test every week as team.</p>
 
