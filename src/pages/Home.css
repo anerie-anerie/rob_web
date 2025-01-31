@@ -1,18 +1,13 @@
 .home-container {
   text-align: center;
-  padding: 30px 10px; /* Reduced padding to bring gallery closer */
-}
-
-.home-container h1,
-.home-container h2 {
-  font-family: 'Cooper Hewitt', sans-serif;
-  font-weight: bold;
-  color: #ffb703;
-  margin-bottom: 10px; /* Reduced margin for tighter spacing */
+  padding: 0px;
 }
 
 .home-container h1 {
   font-size: 3rem;
+  color: #ffb703;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
 }
 
 .home-container h2 {
@@ -21,12 +16,10 @@
 }
 
 .gallery-container {
-  margin-top: 0; /* Remove or reduce margin on top of the gallery */
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0px; /* Reduced margin to bring gallery closer to title */
   height: 500px;
   width: 100%;
   overflow: hidden;
@@ -138,8 +131,6 @@
 }
 
 
-
-
 .logo {
   position: absolute;
   top: 5vh; 
@@ -152,7 +143,6 @@
 
 .navigation-buttons-container {
   position: absolute;
-  top: 100vh; /* Adjusted so button scrolls with content */
   left: -43%; /* Centers the button */
   transform: translateX(-50%);
   width: 10vw;
@@ -165,8 +155,7 @@
   color: hotpink;  /* Text color in pink */
   text-align: center;
   width: 100%;
-  padding: 20px;
-  margin-top: auto;
+  padding: 20vw;
 }
 
 .p{
