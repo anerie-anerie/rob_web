@@ -21,6 +21,7 @@
 }
 
 .gallery-container {
+  margin-top: 0; /* Remove or reduce margin on top of the gallery */
   position: relative;
   display: flex;
   justify-content: center;
@@ -134,4 +135,19 @@
   .home-container h2 {
     font-size: 1.8rem;
   }
+}
+
+.forklift-title {
+  margin-bottom: 10px; 
+}
+
+
+.logo {
+  position: absolute;
+  top: 5vh; /* Distance from the top */
+  left: 5vh; /* Distance from the right */
+  width: 5.7vw; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 10; /* Ensure it stays on top of other elements */
+  border-radius: 10px; /* adds roundness */
 }

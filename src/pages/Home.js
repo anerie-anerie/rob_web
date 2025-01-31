@@ -94,8 +94,10 @@ const RollingGallery = ({ autoplay = false, pauseOnHover = false, images = IMGS 
 
   return (
     <div className="home-container">
+      <img src="/img/logo.webp" alt="Logo" className="logo" />
+
     <h1>The Majestic Marauders 50226B presents...</h1>
-    <h2>FORKLIFT</h2> 
+    <h2 className="forklift-title">🔥 FORKLIFT 🔥</h2> 
     <div className="gallery-container">
       <div className="gallery-content">
         <motion.div

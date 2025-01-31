@@ -8,26 +8,41 @@
   padding: 4vh 5vw;
 }
 
+/* Position the Home page button at the center */
+.nav-buttons .home-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Position for the Next button on other pages */
+.nav-button.next {
+  position: absolute;
+  right: 5vw;
+  bottom: 4vh;
+}
+
+/* General styling for buttons */
 .nav-button {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.nav-button.next {
-  position: absolute;
-  right: 5vw; /* Fix right button position */
-  bottom: 4vh;
-
-}
-
+/* Default size for the next button */
 .nav-button img {
-  width: 4vw; /* Adjust size as needed */
+  width: 4vw;  /* Default size */
   height: auto;
   transition: transform 0.2s ease-in-out;
 }
 
-
+/* Hover effect stays the same */
 .nav-button img:hover {
-  transform: scale(1.1); /* Slight zoom on hover */
+  transform: scale(1.1);
+}
+
+/* Make the Begin button bigger on the Home page */
+.home-button img {
+  width: auto; /* Increased size */
+  height: 8vh;
 }
