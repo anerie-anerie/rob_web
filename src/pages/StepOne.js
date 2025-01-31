@@ -11,4 +11,6 @@ const StepOne = () => {
   );
 };
 
+/* oopsises! deleted the video part .... */
+
 export default StepOne;
