@@ -7,7 +7,7 @@ const StepTwo = () => {
     <div>
       {/* Image of the Canva Design */}
       <img
-        src={process.env.PUBLIC_URL + "public/img/stageTwo.png"}
+        src="/img/stageTwo.png" // Correct path
         alt="Merivale ROB Design"
         style={{
           display: "block",
@@ -24,5 +24,3 @@ const StepTwo = () => {
 };
 
 export default StepTwo;
-
-
