@@ -27,7 +27,7 @@ const StepTwo = () =>{
               could soon become a problem.
             </p>
             <img
-              src="/img/conveyor-old.jpg"
+              src="/public/img/conveyor-old.jpg"
               alt="Conveyor Old Design"
               className="image"
             />
