@@ -17,7 +17,8 @@ const images = [
     "testing.JPG",
     "tub1.jpeg",
     "tub2.jpeg",
-    "working.jpeg"
+    "working.jpeg",
+    "groupPic.JPG"
 ];
 
 const About = () => {

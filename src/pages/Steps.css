@@ -97,14 +97,37 @@ footer {
 }
 
 .step-one-container {
-    background-image: url('/public/img/stageOne.png'); /* Path to the image */
-    background-size: 90% auto;
-    background-position: top center; /* Aligns the image to the top */
-    background-repeat: no-repeat; /* Prevents tiling of the image */
-    min-height: 100vh; /* Ensures the container takes at least the full viewport height */
-    text-align: center; /* Centers the text */
-    background-attachment: scroll; /* Ensures the background image scrolls with content */
-    overflow: auto; /* Ensures scrolling is enabled when content overflows */
-  }
-  
-  
+    background-image: url('/public/img/stageOne.png');
+    background-size: contain; 
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+    width: 100vw;
+    height: auto; 
+    overflow: auto; 
+    text-align: center;
+}
+
+.step-three-container {
+    background-image: url('/public/img/stageThree.png');
+    background-size: contain; 
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+    width: 100vw;
+    height: auto; 
+    overflow: auto; 
+    text-align: center;
+}
+
+.step-four-container {
+    background-image: url('/public/img/stageFour.png');
+    background-size: contain; 
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+    width: 100vw;
+    height: auto; 
+    overflow: auto; 
+    text-align: center;
+}
